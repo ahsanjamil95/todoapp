@@ -1,35 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do Item</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.css">
-</head>
-<body>
-        <div class="container-fluid">
-           <div class="container">
-               <div class="row">
-                <div class="col-xl-2 col-lg-4 col-md-12 col-sm-12 col-xs-12"> </div>
-        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 text-center mt-5 main"> 
-            <h1>To-Do Application</h1>
-            <input type="text" class="in" placeholder="Enter Your To-do" id="todo-item"><br>
-            <button  onclick="addTodo()" class="btn bg-light ml-2 mt-4"> Add Text</button><button onclick="deleteAll() " class="btn bg-light ml-2 mt-4">Clear All</button>
-            <hr style="background-color: white;">
-              </div>
-               </div>
-               <!-- second row -->
-               <div class="row">
-                <div class="col-xl-2 col-lg-4 col-md-12 col-sm-12 col-xs-12"> </div>
-                <div class="col-xl-8 col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center mt-5 main"> 
-               <ul id="list">
-
-               </ul>
-              </div>
-               </div>
-           </div>  
-        </div>
-</body>
-<script src="app.js"></script>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <title>To Do Application</title>
+    <style>
+		.updt,.del{ 
+			width:90px;
+			height: 30px;
+			margin: 10px;
+			cursor: pointer;
+			font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+		}
+		.updt{
+		   background-color: deepskyblue;
+			border-color: deepskyblue;
+			color: white;
+			border-radius: 8px;
+		}
+		.del{
+		   background-color: red;
+			border-color: red;
+			color: white;
+			border-radius: 8px;
+		}
+		.pgf{
+			font-family: Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace;
+			color: maroon;
+			font-weight: bold;
+		}
+	  </style>
+  </head> 
+   <body>
+   <h4 class="text-center text-info my-5">To Do Applcaton Based On JavaScript</h4>
+   <div class="container-fluid">
+     <div class="container">
+     <div class="row justify-content-center">
+     <div class="col-6 form-inline">
+     <label class="m-4 text-dark">Enter Value:  </label>
+     	<input type="text" id="input" class="form-control"  placeholder="User Input..." required/>
+     	
+   <button type="submit" id="btn" onClick="getVal()" class="btn btn-success mx-3">Submit</button>
+   <button type="submit" id="delbtn" onClick="dellAll()" class="btn btn-danger">Delete All</button>
+   
+   <p id="req" style="color: red"></p>
+   <div id="main"></div>
+    
+     </div>
+     	
+     </div>
+     	
+     </div>
+   	
+   </div>
+   
+   
+   </body>
 </html>
+ <script src="app.js"></script>

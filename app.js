@@ -5,7 +5,7 @@ function getVal(){
 	if(input.value === ""){
 		var req = document.getElementById("req");
 		req.innerHTML = "Required Field";
-		req.delay(3000).remove();
+		req.delay(1000).remove();
 	}else{
 	var p = document.createElement("p");
 	p.setAttribute("class","pgf");
